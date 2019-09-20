@@ -1,0 +1,7 @@
+"catastropherp"
+{
+	"title"		"Catastrophe RP"
+	"maps"		"crp_"
+	"menusystem"	"1"
+	"workshopid"	""
+}

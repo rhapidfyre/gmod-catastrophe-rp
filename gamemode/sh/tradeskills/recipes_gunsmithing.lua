@@ -1,0 +1,28 @@
+
+recipes_gunsmithing = {
+	["Gunpowder"] 			= gs_gunpowder,
+	["Metal Casings"] 		= gs_metal_casings,
+	["Firing Pin"] 			= gs_firing_pin,
+	["Pistol Grip"] 		= gs_pistol_grip,
+	["Pistol Barrel"] 		= gs_pistol_barrel,
+	["9mm Ammunition"] 		= item_pistol_ammo,
+	["Perfected Rebar"] 	= gs_perf_rebar,
+	["Magazine Receptor"] 	= gs_mag_receptor,
+	["9mm Pistol"]			= item_pistol,
+	["SMG Ammo"] 			= item_smg_ammo,
+	["Rifle Spring"] 		= gs_rifle_spring,
+	["Revolver Cylinder"] 	= gs_357_cylinder,
+	["SMG Barrel"] 			= gs_smg_barrel,
+	["Revolver Frame"] 		= gs_357_frame,
+	["357 Ammo"] 			= item_357_ammo,
+	["Combine Receptor"] 	= gs_combine_receptor,
+	["Shotgun Barrel"] 		= gs_shotgun_barrel,
+	["Submachine Gun"] 		= item_smg,
+	["Pulse Ammo"] 			= item_ar2_ammo,
+	["357 Revolver"] 		= item_357,
+	["Crossbow Bolt"] 		= item_crossbow_ammo,
+	["Shotgun Ammo"] 		= item_shotgun_ammo,
+	["Shotgun"] 			= item_shotgun,
+	["AR2 Combine Rifle"] 	= item_ar2,
+	["Rebar Crossbow"] 		= item_crossbow
+}

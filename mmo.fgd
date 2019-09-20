@@ -1,0 +1,109 @@
+@include "base.fgd" 
+//-------------------------------------------------------------------------
+//
+// Game data for Catastrophe RPG
+//
+//-------------------------------------------------------------------------
+
+@PointClass base(Targetname, Origin) studioprop("models/props_lab/tpswitch.mdl") = mmo_rebel_bank : "" []
+@PointClass base(Targetname, Origin) studioprop("models/props_combine/combine_interface001.mdl") = mmo_combine_bank : "" []
+@PointClass base(Targetname, Origin) studioprop("models/props_lab/eyescanner.mdl") = mmo_marketplace : "" []
+
+@PointClass base(Targetname, Origin) studioprop("models/props_lab/generatorconsole.mdl") = mmo_demolitions : "" []
+@PointClass base(Targetname, Origin) studioprop("models/props_c17/trappropeller_engine.mdl") = mmo_engineering : "" []
+@PointClass base(Targetname, Origin) studioprop("models/items/ammocrate_smg1.mdl") = mmo_gunsmithing : "" []
+@PointClass base(Targetname, Origin) studioprop("models/props_lab/crematorcase.mdl") = mmo_researching : "" []
+
+@PointClass base(Targetname, Origin, Angles) = mmo_npc_spawner : "Creates npc camps / spawns"
+[
+	radius(string) : "Spawn Radius" : 256 : "Set the maximum distance around the spawner that the NPCs can spawn inside. Give a number in radius."
+	maxmobs(string) : "Maxmimum Alive" : 1 : "Maximum NPCs to be alive at one time."
+	timermin(string) : "Respawn Timer Min" : 10 : "Minimum time between spawns in seconds."
+	timermax(string) : "Respawn Timer Max" : 60 : "Maximum time between spawns in seconds."
+	levelrandom(choices) : "Use Random Level" : 1 : "If set to false, all NPCs created will be set to Maximum Level given by this entity." =
+	[
+		0 : "False"
+		1 : "True"
+	]
+	levelmin(string) : "Minimum Level" : 1 : "Set the minimum level of NPCs spawning in this radius"
+	levelmax(string) : "Maximum Level" : 10 : "Set the maximum level of NPCs spawning in this radius"
+	npcclass(choices) : "NPC Class" : 0 : "Class of NPC to spawn from this spawner. You can add more by editing the FGD." =
+	[
+		"npc_antlion": "npc_antlion"
+		"npc_antlionguard": "npc_antlionguard"
+		"npc_barnacle": "npc_barnacle"
+		"npc_barney": "npc_barney"
+		"npc_breen": "npc_breen"
+		"npc_citizen": "npc_citizen"
+		"npc_combine_s": "npc_combine_s"
+		"npc_cscanner": "npc_cscanner"
+		"npc_fastzombie": "npc_fastzombie"
+		"npc_fastzombie_torso": "npc_fastzombie_torso"
+		"npc_headcrab" : "npc_headcrab"
+		"npc_headcrab_black" : "npc_headcrab_black"
+		"npc_headcrab_fast" : "npc_headcrab_fast"
+		"npc_manhack" : "npc_manhack"
+		"npc_metropolice" : "npc_metropolice"
+		"npc_poisonzombie" : "npc_poisonzombie"
+		"npc_strider" : "npc_strider"
+		"npc_zombie" : "npc_zombie"
+		"npc_zombie_torso" : "npc_zombie_torso"
+		"npc_rollermine" : "npc_rollermine"
+	]
+	citizenmodel(choices) : "Citizen Model" : 0 : "If using a citizen spawner, this will determine the model to use." =
+	[
+		0 : "Citizen"
+		1 : "Rebel"
+		2 : "Medic"
+	]
+	combinemodel(choices) : "Combine Model" : 0 : "If using a combine spawner, this will determine the model to use." =
+	[
+		0 : "Combine Soldier"
+		1 : "Elite Combine"
+		2 : "Nova Prospekt"
+	]
+]
+
+@PointClass base(Targetname, Origin, Angles) = mmo_boss_spawner : "Creates Bosses"
+[
+	radius(string) : "Spawn Radius" : 256 : "Set the maximum distance around the spawner that the NPCs can spawn inside. Give a number in radius."
+	maxmobs(string) : "Maxmimum Alive" : 1 : "Maximum NPCs to be alive at one time."
+	timermin(string) : "Respawn Timer Min" : 10 : "Minimum time between spawns in seconds."
+	timermax(string) : "Respawn Timer Max" : 60 : "Maximum time between spawns in seconds."
+	levelmax(string) : "Boss Level" : 100 : "Set the maximum level of NPCs spawning in this radius"
+	npcclass(choices) : "NPC Class" : 0 : "Class of NPC to spawn from this spawner. You can add more by editing the FGD." =
+	[
+		"npc_antlion": "npc_antlion"
+		"npc_antlionguard": "npc_antlionguard"
+		"npc_barnacle": "npc_barnacle"
+		"npc_barney": "npc_barney"
+		"npc_breen": "npc_breen"
+		"npc_citizen": "npc_citizen"
+		"npc_combine_s": "npc_combine_s"
+		"npc_cscanner": "npc_cscanner"
+		"npc_fastzombie": "npc_fastzombie"
+		"npc_fastzombie_torso": "npc_fastzombie_torso"
+		"npc_headcrab" : "npc_headcrab"
+		"npc_headcrab_black" : "npc_headcrab_black"
+		"npc_headcrab_fast" : "npc_headcrab_fast"
+		"npc_manhack" : "npc_manhack"
+		"npc_metropolice" : "npc_metropolice"
+		"npc_poisonzombie" : "npc_poisonzombie"
+		"npc_strider" : "npc_strider"
+		"npc_zombie" : "npc_zombie"
+		"npc_zombie_torso" : "npc_zombie_torso"
+		"npc_rollermine" : "npc_rollermine"
+	]
+	citizenmodel(choices) : "Citizen Model" : 0 : "If using a citizen spawner, this will determine the model to use." =
+	[
+		0 : "Citizen"
+		1 : "Rebel"
+		2 : "Medic"
+	]
+	combinemodel(choices) : "Combine Model" : 0 : "If using a combine spawner, this will determine the model to use." =
+	[
+		0 : "Combine Soldier"
+		1 : "Elite Combine"
+		2 : "Nova Prospekt"
+	]
+]
